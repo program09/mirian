@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola</title>
+    <link rel="stylesheet" href="./js/carta.css">
+</head>
+<style>
+  
+    .heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    }
+
+    .heart:before,
+    .heart:after {
+    position: absolute;
+    content: "";
+    left: 18px;
+    top: 0px;
+    width: 18px;
+    height: 30px;
+    background: #ff0202;
+    border-radius: 30px 30px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+    }
+
+    .heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin :100% 100%;
+    }
+
+    .one {
+    transform: scale(0.8);
+    opacity: 0.6;
+    animation: up 15s linear infinite, side2 6s ease-in-out infinite alternate;
+    }
+
+    .two {
+    transform: scale(0.8);
+    opacity: 0.9;
+    animation: up 25s linear infinite, side2 5s ease-in-out infinite alternate;
+    }
+
+    .three {
+    transform: scale(0.8);
+    opacity: 0.8;
+    animation: up 20s linear infinite, side2 4s ease-in-out infinite alternate;
+    }
+
+    .four {
+    transform: scale(0.7);
+    opacity: 0.9;
+    animation: up 18s linear infinite, side2 2s ease-in-out infinite alternate;
+    }
+
+    .five {
+    transform: scale(0.6);
+    opacity: 0.3; 
+    animation: up 7s linear infinite, side2 1s ease-in-out infinite alternate;
+    }
+
+    .six {
+    opacity: 0.8; 
+    animation: up 10s linear infinite, side 7s ease-in-out infinite alternate;
+    }
+
+
+    .siete {
+    opacity: 0.4; 
+    animation: up 9s linear infinite, side2 5s ease-in-out infinite alternate;
+    }
+
+    .ocho {
+    opacity: 0.5; 
+    animation: up 7s linear infinite, side 3s ease-in-out infinite alternate;
+    }
+
+    .nueve {
+    opacity: 0.3; 
+    animation: up 15s linear infinite, side2 10s ease-in-out infinite alternate;
+    }
+
+    .diez {
+    opacity: 0.4; 
+    animation: up 13s linear infinite, side2 6s ease-in-out infinite alternate;
+    }
+
+    .a{
+        transform: scale(0.6);
+        opacity: 0.4; 
+        animation: up 3s linear infinite, side2 6s ease-in-out infinite alternate;
+    }
+    .a1{
+        transform: scale(0.6);
+        opacity: 0.4; 
+        animation: up 3s linear infinite, side2 5s ease-in-out infinite alternate;
+    }
+    .a2{
+        transform: scale(0.6);
+        opacity: 0.4; 
+        animation: up 3s linear infinite, side2 4s ease-in-out infinite alternate;
+    }
+    .a3{
+        transform: scale(0.6);
+        opacity: 0.4; 
+        animation: up 4s linear infinite, side2 2s ease-in-out infinite alternate;
+    }
+    .a4{
+        transform: scale(0.6);
+        opacity: 0.4; 
+        animation: up 5s linear infinite, side2 3s ease-in-out infinite alternate;
+    }
+    .a5{
+        transform: scale(0.6);
+        opacity: 0.4; 
+        animation: up 3s linear infinite, side2 6s ease-in-out infinite alternate;
+    }
+    .a6{
+        transform: scale(0.6);
+        opacity: 0.4; 
+        animation: up 5s linear infinite, side2 4s ease-in-out infinite alternate;
+    }
+    .a7{
+        transform: scale(0.6);
+        opacity: 0.4; 
+        animation: up 4s linear infinite, side2 3s ease-in-out infinite alternate;
+    }
+    .a8{
+        transform: scale(0.6);
+        opacity: 0.4; 
+        animation: up 3s linear infinite, side2 4s ease-in-out infinite alternate;
+    }
+    .a9{
+        transform: scale(0.6);
+        opacity: 0.4; 
+        animation: up 4s linear infinite, side2 2s ease-in-out infinite alternate;
+    }
+
+
+
+    @keyframes up {     
+        0% { 
+            top: 300px;
+        }
+        100% { 
+            top: -500px;
+        }
+    }
+
+    @keyframes side {
+        0% {
+            margin-left: 0px;
+        }
+        100% {
+            margin-left: 50px;
+        }
+    }
+
+    @keyframes side2 {
+        0% {
+            margin-left: -120px;
+        }
+        100% {
+            margin-left: 100px;
+        }
+    }
+
+    .heart p{
+        color: white;
+        font-size: 19px !important;
+    }
+
+</style>
+<body>
+    <canvas id="c"></canvas>
+    <div class="container">
+        <div class="envelope"></div>
+        <div class="card">
+            <br>
+            <h3><b>Happy Birthday to You</b></h3>
+            <p>Esta es una carta para tí, espero que te guste. Te deseo un feliz y exitoso 23 años. Sigue adelante, tendras un gran futuro, vé por todo lo que quieres y anhelas, confío en que lograrás todo eso que siempre quisiste. Te mando un fuerte abrazo a la distancia. Y felicita también a tus padres por haberte hecho cosita hermosa 🤩 🤩. Aún te debo el caramelo de limón... Cuidate Mucho... <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;🥳🥳 <b>FELIZ CUMPLEAÑOS CHICA LINDA</b> 🥳🥳... </p><br>
+            <div class="imagen_div"><img src="https://i.pinimg.com/originals/9e/cf/3f/9ecf3f6dcc80c6d105ce8f777430e4ba.gif" alt="">
+            <p class="footer"><b>De:</b> Yordi <b>Para:</b> Mirian</p></div>         
+        </div>     
+        <div class="cover"></div>
+        <div class="lid"></div>
+        <div class="musica">        
+            <audio controls="" autoplay="autoplay" preload="none" loop>
+                <source src="js/happy.mp3" type="audio/mp3">
+            </audio>
+        </div>       
+    </div>
+    <div class='heart one'><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Feliz Cumpleaños</p></div>
+    <div class='heart two'><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mirian linda</p></div>
+    <div class='heart three'><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mirian hermosa</p></div>
+    <div class='heart four'><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mirian encantadora</p></div>
+    <div class='heart five'></div>
+    <div class='heart six'></div>   
+    <div class='heart siete'></div> 
+    <div class='heart ocho'></div> 
+    <div class='heart nueve'></div> 
+    <div class='heart diez'></div> 
+    <div class='heart a'></div> 
+    <div class='heart a1'></div> 
+    <div class='heart a2'></div> 
+    <div class='heart a3'></div> 
+    <div class='heart a4'></div> 
+    <div class='heart a5'></div> 
+    <div class='heart a6'></div> 
+    <div class='heart a7'></div> 
+    <div class='heart a8'></div> 
+    <div class='heart a9'></div> 
+    
+    
+</body>
+</html>

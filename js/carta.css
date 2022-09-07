@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh !important;
+  width: 100%;
+  background: #f1edee;
+  background-image: url(https://acegif.com/wp-content/uploads/firework-12.gif);
+  font-family: 'Calibri light';
+  padding-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.container {
+  position: relative;
+  top: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.envelope {
+  position: relative;
+  background: #e4c0c6;
+  width: 450px;
+  height: 300px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.819);
+}
+
+.card {
+  position: absolute;
+  background: rgba(255, 255, 255, 0);
+  background-image: url(http://fondopantalla.com.es/file/754/600x338/16:9/textura-papel_1891151717.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 430px;
+  height: 298px;
+  left: 20px;
+  top: 0px;
+  animation: slide-rev 0.2s ease-out;
+  border-radius: 20px;
+  border: 1px solid rgb(98, 92, 92);
+}
+
+.card p {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #000000;
+  text-align: justify;
+}
+
+
+.card h1{
+  color: rgb(35, 40, 75);
+}
+
+.cover {
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-bottom: 150px solid #e3dede;
+  border-left: 225px solid transparent;
+  border-right: 225px solid transparent;
+  top: 150px;
+  z-index: 3;
+  border-radius: 20px;
+
+}
+
+.cover::after {
+  position: absolute;
+  content: '';
+  border-left: 225px solid #f7eced;
+  border-bottom: 150px solid transparent;
+  border-top: 150px solid transparent;
+  top: -150px;
+  left: -225px;
+  border-bottom-left-radius: 20px;
+}
+
+.cover::before {
+  position: absolute;
+  content: '';
+  border-right: 225px solid #f7eced;
+  border-bottom: 150px solid transparent;
+  border-top: 150px solid transparent;
+  top: -150px;
+  left: 0px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.lid {
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-top: 155px solid #e8dbdd;
+  border-left: 225px solid transparent;
+  border-right: 225px solid transparent;
+  top: 0;
+  transform-origin: top;
+  animation: open-rev 2s;
+}
+
+.container:hover .lid {
+  animation: open 0.8s;
+  animation-fill-mode: forwards;
+}
+
+.container:hover .card {
+  animation: slide 0.2s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.shadow {
+  position: relative;
+  top: 3vmin;
+  border-radius: 50%;
+  opacity: 0.7;
+  height: 2vmin;
+  width: 48vmin;
+  background: #b8b0b3;
+}
+
+@keyframes open {
+  100% {
+    transform: rotatex(180deg);
+  }
+}
+
+@keyframes slide {
+  100% {
+    transform: translatey(-25vmin);
+    box-shadow: 0px 5px 15px rgba(80, 78, 78, 0.164);
+    z-index: 999;
+    top: 50px;
+    height: 300px;
+  }
+}
+
+@keyframes open-rev {
+  from {
+    transform: rotatex(-180deg);
+  }
+}
+
+@keyframes slide-rev {
+  from {
+    transform: translatey(-15vmin);
+  }
+}
+
+canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.card h1 {
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.imagen_div {
+  width: 100%;
+}
+
+.imagen_div img {
+  width: 100px;
+  margin-bottom: 0;
+  animation:side2 8s ease-in-out infinite alternate;
+  box-shadow: 0px 10px 4px -10px rgba(41, 39, 39, 0.497);
+}
+
+.footer{
+  width: 100%;
+  text-align: center !important;
+  color: transparent !important;
+}
+
+
+
+@keyframes side2 {
+  0% {
+      margin-left: -160px;
+  }
+  50%{
+    margin-top: -50px;
+  }
+  100% {
+      margin-left: 150px;
+      margin-top: -30px;
+  }
+}
+
+.imagen_div hr {
+  width: 80%;
+  margin: auto;
+  background: black;
+  border: 1px solid black;
+  margin-top: -10px;
+}
+
+.musica {
+  padding-top: 20px;
+}
+
+.musica audio source {
+  background: red !important;
+}
+
+
+body::-webkit-scrollbar{
+  width: 0px;
+  background-color: #F5F5F5;
+}
